@@ -4,8 +4,8 @@ name: flypig's house
 description: a way to effect world
 
 # Url is currently only used only for the RSS feed in feed.xml
-#url: https://flypig-xian.github.io
-url: http://localhost:4000
+url: https://flypig-xian.github.io
+#url: http://localhost:4000
 
 # For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
 baseurl: ''
