@@ -2,7 +2,8 @@
 
 name: flypig's house
 description: a way to effect world
-
+language: zh-CN #语言
+timezone: Asia/Shanghai
 # Url is currently only used only for the RSS feed in feed.xml
 url: https://flypig-xian.github.io
 #url: http://localhost:4000
@@ -25,6 +26,7 @@ social:
   instagram:
   lastfm:
   rss:
+  email: cgmays1230@gmail.com
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key:
