@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>flypig's house | About </title>
+  <title>flypig's house | Linux 读写权限说明 </title>
   <meta name="theme-color" content="#222222" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/js/jquery.min.js"></script>
@@ -60,17 +60,72 @@
     </div>
   </nav>
 
-
     <div class="wrapper">
       <div class="content">
         <div class="container container-center">
           <div class="row">
             <div class="col-md-8">
-              <div class="well">
-                <h1 id="introduce">Introduce</h1>
-<p>飞天猪，男<br />
-一行代码改变世界！</p>
+              <div class="article">
+                <div class="well">
+                  <h1><a href="/2017/05/Linux-chmod">Linux 读写权限说明</a></h1>
+                  <div class="post-meta">
+                    <div class="post-time">
+                      <i class="fa fa-calendar"></i>
+                      <time>10 May 2017</time>
+                    </div>
+                    <ul>
+                      
+                        <li><a href="/tag/Linux">Linux</a></li>
+                      
+                    </ul>
+                  </div>
+                  <div class="post-content">
+                    <div id="toc" class="toc"></div>
+                    <h2 id="文件权限简介">文件权限简介</h2>
+<p>Linux中文件有三种权限：</p>
 
+<table>
+  <tbody>
+    <tr>
+      <td>　R　</td>
+      <td>读　　　</td>
+      <td>用数字４表示</td>
+    </tr>
+    <tr>
+      <td>　W　</td>
+      <td>写　　　</td>
+      <td>用数字２表示</td>
+    </tr>
+    <tr>
+      <td>　X　</td>
+      <td>可　　　</td>
+      <td>用数字１表示</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>　　<br />
+一个典型的普通文件的权限表示为10个长度的字符，分为四段，以<code class="highlighter-rouge">-rw-rw-r--</code>为例：<br />
+其中第一段<code class="highlighter-rouge">-</code>表示这是一个普通文件,如果为<code class="highlighter-rouge">d</code>则表示目录；<br />
+第二段<code class="highlighter-rouge">rw-</code>，表示当前用户有读写权限，用数字表示为<code class="highlighter-rouge">4+2=6</code>；<br />
+第三段<code class="highlighter-rouge">rw-</code>，表示当前所属用户组有读写权限，用数字表示为<code class="highlighter-rouge">4+2=6</code>；<br />
+最后一段<code class="highlighter-rouge">r--</code>，表示其他用户有读权限，用数字表示为<code class="highlighter-rouge">2</code>；<br />
+因此，此文件的操作权限用数字表示为<code class="highlighter-rouge">662</code>。</p>
+<h2 id="修改权限">修改权限</h2>
+<p>命令格式：<code class="highlighter-rouge">sudo chmod [u|g|o|a][+|-][r|w|x]　文件 or 目录</code><br />
+其中,<code class="highlighter-rouge">u</code>：当前用户，<code class="highlighter-rouge">g</code>：所属用户组，<code class="highlighter-rouge">o</code>：其他用户，<code class="highlighter-rouge">a</code>：所有用户<br />
+<code class="highlighter-rouge">+</code>：增加权限，<code class="highlighter-rouge">-</code>：取消权限<br />
+将上述权限<code class="highlighter-rouge">662</code>的文件改为<code class="highlighter-rouge">743</code>的权限：</p>
+<ul>
+  <li>方式1：<code class="highlighter-rouge">sudo chmod u+x g-w o+x filename</code></li>
+  <li>方式2：<code class="highlighter-rouge">sudo chmod 743 filename</code></li>
+</ul>
+
+                    
+
+                  </div>
+                  
+                </div>
               </div>
             </div>
             <div class="col-md-4 hidden-xs">
@@ -106,6 +161,8 @@
             </div>
           </div>
         </div>
+        
+
       </div>
           <footer class="footer-distributed">
       <div class="container">
