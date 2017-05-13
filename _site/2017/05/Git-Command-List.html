@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>flypig's house | Posts Tagged &ldquo;PHP&rdquo; </title>
+  <title>flypig's house | Git Commands List </title>
   <meta name="theme-color" content="#222222" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/js/jquery.min.js"></script>
@@ -60,45 +60,52 @@
     </div>
   </nav>
 
-
     <div class="wrapper">
       <div class="content">
         <div class="container container-center">
           <div class="row">
             <div class="col-md-8">
-              <div class="well">
-                <div class="page-content wc-container">
-
-  <div class="post">
-    <h2 class="post_title">Posts Tagged &ldquo;PHP&rdquo;</h2>
+              <div class="article">
+                <div class="well">
+                  <h1><a href="/2017/05/Git-Command-List">Git Commands List</a></h1>
+                  <div class="post-meta">
+                    <div class="post-time">
+                      <i class="fa fa-calendar"></i>
+                      <time>13 May 2017</time>
+                    </div>
+                    <ul>
+                      
+                        <li><a href="/tag/Git">Git</a></li>
+                      
+                    </ul>
+                  </div>
+                  <div class="post-content">
+                    <div id="toc" class="toc"></div>
+                    <h2 id="常用指令">常用指令</h2>
+<ul>
+  <li><code class="highlighter-rouge">$git clone [url] [--depth=1]</code>　克隆远端分支到本地,–depth=1仅克隆最近因此的提交，加快速度</li>
+  <li><code class="highlighter-rouge">$git config --list</code>　输出git的当前配置</li>
+  <li><code class="highlighter-rouge">$git add [.]</code>　增加当前目录的所有变化文件到暂存区</li>
+  <li><code class="highlighter-rouge">$git commit -m [message]</code>　提交变化到本地仓库</li>
+  <li><code class="highlighter-rouge">$git branch</code>　列出所有本地分支
     <ul>
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-          <li class="archive_list">
-            <time>05 May 2017</time>
-            <a class="archive_list_article_link" href='/2017/05/PSR-2'>PSR-2</a>
-            <p>一份关于PHP代码的约定</p>
-          </li>
-          
-        
-      
+      <li><code class="highlighter-rouge">-r</code>　远端分支</li>
+      <li><code class="highlighter-rouge">-a</code>　远端分支和本地分支</li>
     </ul>
-  </div>
-</div>
+  </li>
+  <li><code class="highlighter-rouge">$git push</code>　提交本地修改到远端分支</li>
+  <li><code class="highlighter-rouge">$git pull</code>　取回远端仓库的变化并与本地分支合并</li>
+  <li><code class="highlighter-rouge">$git checkout [branch name]</code>　切换到指定分支，同时更新工作区</li>
+  <li><code class="highlighter-rouge">$git status</code> 　显示所有的变更文件</li>
+  <li><code class="highlighter-rouge">$git log</code>　显示版本提交历史</li>
+  <li><code class="highlighter-rouge">$git reset --hard [commit]</code>　重置当前分支到指定的commit</li>
+</ul>
 
+                    
+
+                  </div>
+                  
+                </div>
               </div>
             </div>
             <div class="col-md-4 hidden-xs">
@@ -140,6 +147,8 @@
             </div>
           </div>
         </div>
+        
+
       </div>
           <footer class="footer-distributed">
       <div class="container">
