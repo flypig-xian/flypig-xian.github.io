@@ -1,0 +1,197 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>flypig's house | Git Commands List </title>
+  <meta name="theme-color" content="#222222" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/toc.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link href="/css/syntax.css" rel="stylesheet">
+  <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  
+
+  
+
+
+ <script type="text/javascript">
+  WebFontConfig = {
+    google: {
+      families: ['Ubuntu::latin']
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">flypig's house</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">主页</a></li>
+          <li><a href="/archive.html">归档</a></li>
+          <li><a href="/tags.html">标签</a></li>
+          <li><a href="/about.html">关于</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="wrapper">
+      <div class="content">
+        <div class="container container-center">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="article">
+                <div class="well">
+                  <h1><a href="/2017/05/Git-Command-List">Git Commands List</a></h1>
+                  <div class="post-meta">
+                    <div class="post-time">
+                      <i class="fa fa-calendar"></i>
+                      <time>13 May 2017</time>
+                    </div>
+                    <ul>
+                      
+                        <li><a href="/tag/Git">Git</a></li>
+                      
+                    </ul>
+                  </div>
+                  <div class="post-content">
+                    <div id="toc" class="toc"></div>
+                    <h2 id="常用指令">常用指令</h2>
+<ul>
+  <li><code class="highlighter-rouge">$git clone [url] [--depth=1]</code>　克隆远端分支到本地,–depth=1仅克隆最近因此的提交，加快速度</li>
+  <li><code class="highlighter-rouge">$git config --list</code>　输出git的当前配置</li>
+  <li><code class="highlighter-rouge">$git add [.]</code>　增加当前目录的所有变化文件到暂存区</li>
+  <li><code class="highlighter-rouge">$git commit -m [message]</code>　提交变化到本地仓库</li>
+  <li><code class="highlighter-rouge">$git branch</code>　列出所有本地分支
+    <ul>
+      <li><code class="highlighter-rouge">-r</code>　远端分支</li>
+      <li><code class="highlighter-rouge">-a</code>　远端分支和本地分支</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">$git push</code>　提交本地修改到远端分支</li>
+  <li><code class="highlighter-rouge">$git pull</code>　取回远端仓库的变化并与本地分支合并</li>
+  <li><code class="highlighter-rouge">$git checkout [branch name]</code>　切换到指定分支，同时更新工作区</li>
+  <li><code class="highlighter-rouge">$git status</code> 　显示所有的变更文件</li>
+  <li><code class="highlighter-rouge">$git log</code>　显示版本提交历史</li>
+  <li><code class="highlighter-rouge">$git reset --hard [commit]</code>　重置当前分支到指定的commit</li>
+</ul>
+
+                    
+
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 hidden-xs">
+              <div class="sidebar ">
+  <h2>最新内容</h2>
+  <ul>
+    
+    <li><a href="/2017/05/Git-Command-List">Git Commands List</a></li>
+    
+    <li><a href="/2017/05/Linux-commands">Linux Commands</a></li>
+    
+    <li><a href="/2017/05/Linux-chmod">Linux 读写权限说明</a></li>
+    
+    <li><a href="/2017/05/PSR-2">PSR-2</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>标签</h2>
+  <ul class="sideBarTags">
+    
+    
+    <li>
+      <a href="/tag/Git" data-toggle="tooltip" data-placement="right" title="1">
+        <span>Git</span></a></li>
+    
+    <li>
+      <a href="/tag/Linux" data-toggle="tooltip" data-placement="right" title="2">
+        <span>Linux</span></a></li>
+    
+    <li>
+      <a href="/tag/PHP" data-toggle="tooltip" data-placement="right" title="1">
+        <span>PHP</span></a></li>
+    
+  </ul>
+</div>
+
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+          <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer">
+          <p>flypig_xian &copy; 2017</p>
+          <h6>Follow me</h6>
+
+<ul class="social-media">
+
+  
+    <li>
+      <a title="flypig-xian on Github" href="https://github.com/flypig-xian" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    </li>
+  
+
+  
+    <li>
+      <a title=" on StackOverflow" href="https://stackoverflow.com/users/" target="_blank"><i class="fa fa-stack-overflow fa-2x"></i></a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+    <li>
+      <a href="mailto:cgmays1230@gmail.com"  title="Email">
+         <i class="fa fa-envelope-o fa-2x"></i>
+      </a>
+    </li>
+  
+
+</ul>
+
+        </div>
+      </div>
+    </footer>
+
+    </div>
+  </body>
+</html>
