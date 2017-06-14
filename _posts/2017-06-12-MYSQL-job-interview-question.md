@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "mysql_basic_int(10)_and_varchar(20)"
-date: 2017-06-01 11:41:06 +0800
+date: 2017-06-12 11:41:06 +0800
 description: MYSQL两个面试题
 tags: 
  - MYSQL
