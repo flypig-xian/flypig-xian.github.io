@@ -70,3 +70,11 @@ PHP针对数组，内置了许多可用的函数，而排序函数更是重中�
     {% endhighlight %}
 
    首先取出多维数组的两列，然后函数会将第一列按照降序排列，再将第二列中对应第一列相同的部分按照升序排序，则这个二维数组就有序了。
+   
+   例2中的取多维数组的列操作也可以直接采用PHP中的内置函数`array_column`函数来实现。
+   
+    {% highlight php %}
+    <?php
+   array array_column ( array $input , mixed $column_key [, mixed $index_key = null ] )
+    {% endhighlight %}
+   `array_column()` 返回input数组中键值为`column_key`的列， 如果指定了可选参数`index_key`，那么`input`数组中的这一列的值将作为返回数组中对应值的键。
