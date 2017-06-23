@@ -13,10 +13,10 @@ PHP针对数组，内置了许多可用的函数，其中有一类函数，可�
 ### 数组中的对偶函数表
 
  | 函数名称       | 函数作用      |  反函数 |
- |:-----------------:|:--------------:|:---------------:|
+ |:-----------------|:--------------|:---------------|
  | [array_push()](http://php.net/manual/zh/function.array-push.php)       | 入栈      | array_pop() |
  | [array_pop()](http://php.net/manual/zh/function.array-pop.php)     | 出栈      | array_push() |
- | [array_unshift()](http://php.net/manual/zh/function.array-unshift.php)| 入队(数组开头)     | array_shift() |
+ | [array_unshift()](http://php.net/manual/zh/function.array-unshift.php)　　| 入队(数组开头)     | array_shift() |
  | [array_shift()](http://php.net/manual/zh/function.array-shift.php)       | 出队(数组开头)      | array_unshift() |
  | [extract()](http://php.net/manual/zh/function.extract.php)       | 数组拆分变量符号表      |compact() |
  | [compact()](http://php.net/manual/zh/function.compact.php)     | 变量压缩成数组      | extract() |
