@@ -7,6 +7,134 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>20170704 入职第一天 记录</title>
+				<description>&lt;p&gt;上午主要是填写了各种文件，账号和各种权限还没有开！从下午开始简单记录：&lt;br /&gt;
+这次加入的是新房研发部门，团队是旅居研发团队。团队中除了leader健总，还有师父王宝明，李振兴，张留彬三名加入链家一年以上的老员工。剩下四人是新加入链家的新人，包括我，牛京，王伉三个基本同一时间入职的，还有郑泽亮同学，应该是入职链家有一段时间了。&lt;/p&gt;
+&lt;h3 id=&quot;与师傅的第一次交谈&quot;&gt;与师傅的第一次交谈&lt;/h3&gt;
+
+&lt;p&gt;师父的介绍主要分为三块，第一部分：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;主要是开发流程，主要包括以下步骤，&lt;br /&gt;
+需求评审–&amp;gt;技术评审–&amp;gt;排期–&amp;gt;开发、测试–&amp;gt;上线。&lt;br /&gt;
+几个主要的角色缩写：PM–产品经理，RD–研发，FE–前端，QA–质量管理，OP–运维&lt;br /&gt;
+这个开发流程和在中兴通讯中的研发流程，大体是相同的，也就是说通信与互联网的壁垒那不是那么绝对的，都是在互相学习的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;第二部分：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;有关团队的业务，目前新房研发部，在新房业务主要包括C端和B端，C端负责给客户展示，B端则是给经济人管理客户，房源以及交易流程用的。而我们团队现在是一个全新的业务，旅居–就是给客户提供在旅游城市买房的服务，目前仅开通了海南和云南，这是一个全新的业务，有很多机会和学习的内容！值得期待。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;第三部分：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;有关新员工的入职学习，第一条就是日报(最好)，如果略频繁，周报也可以；第二条就是业务的学习和串讲；第三条就是分享，不限于技术，可以是工作感悟，BUG或者问题解决方法。&lt;br /&gt;
+总结起来就是，多交流，多沟通，多请教，多学习。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;关于团队&quot;&gt;关于团队&lt;/h3&gt;
+&lt;p&gt;每周1,3,5 中午12点站会，每周3下午5点周会。&lt;br /&gt;
+团队目前在使用的框架是phalcon，一种基于C扩展的高速PHP框架。&lt;/p&gt;
+
+</description>
+				<pubDate>Tue, 04 Jul 2017 15:21:06 +0800</pubDate>
+				<link>http://localhost:4000/2017/07/lianjia-job-content-1</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/07/lianjia-job-content-1</guid>
+			</item>
+		
+			<item>
+				<title>LeetCode_617. Merge Two Binary Trees</title>
+				<description>&lt;h3 id=&quot;617-merge-two-binary-trees&quot;&gt;617. Merge Two Binary Trees&lt;/h3&gt;
+&lt;p&gt;Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.&lt;/p&gt;
+
+&lt;p&gt;You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.&lt;br /&gt;
+&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/source/images/leetcode/001.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note: The merging process must start from the root nodes of both trees.&lt;br /&gt;
++———-+——–+——–+&lt;br /&gt;
+Write a SQL query to find the cancellation rate of requests made by unbanned clients between Oct 1, 2013 and Oct 3, 2013. For the above tables, your SQL query should return the following rows with the cancellation rate being rounded to two decimal places.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+</description>
+				<pubDate>Fri, 23 Jun 2017 20:21:06 +0800</pubDate>
+				<link>http://localhost:4000/2017/06/Leetcode-algorithm-617</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-algorithm-617</guid>
+			</item>
+		
+			<item>
+				<title>LeetCode_262. Trips and Users</title>
+				<description>&lt;h3 id=&quot;262-trips-and-users&quot;&gt;262. Trips and Users&lt;/h3&gt;
+&lt;p&gt;The Trips table holds all taxi trips. Each trip has a unique Id, while Client_Id and Driver_Id are both foreign keys to the Users_Id at the Users table. Status is an ENUM type of (‘completed’, ‘cancelled_by_driver’, ‘cancelled_by_client’).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;+—-+———–+———–+———+——————–+———-+&lt;br /&gt;
+| Id | Client_Id | Driver_Id | City_Id |        Status      |Request_at|&lt;br /&gt;
++—-+———–+———–+———+——————–+———-+&lt;br /&gt;
+| 1  |     1     |    10     |    1    |     completed      |2013-10-01|&lt;br /&gt;
+| 2  |     2     |    11     |    1    | cancelled_by_driver|2013-10-01|&lt;br /&gt;
+| 3  |     3     |    12     |    6    |     completed      |2013-10-01|&lt;br /&gt;
+| 4  |     4     |    13     |    6    | cancelled_by_client|2013-10-01|&lt;br /&gt;
+| 5  |     1     |    10     |    1    |     completed      |2013-10-02|&lt;br /&gt;
+| 6  |     2     |    11     |    6    |     completed      |2013-10-02|&lt;br /&gt;
+| 7  |     3     |    12     |    6    |     completed      |2013-10-02|&lt;br /&gt;
+| 8  |     2     |    12     |    12   |     completed      |2013-10-03|&lt;br /&gt;
+| 9  |     3     |    10     |    12   |     completed      |2013-10-03| &lt;br /&gt;
+| 10 |     4     |    13     |    12   | cancelled_by_driver|2013-10-03|&lt;br /&gt;
++—-+———–+———–+———+——————–+———-+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The Users table holds all users. Each user has an unique Users_Id, and Role is an ENUM type of (‘client’, ‘driver’, ‘partner’).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;+———-+——–+——–+&lt;br /&gt;
+| Users_Id | Banned |  Role  |&lt;br /&gt;
++———-+——–+——–+&lt;br /&gt;
+|    1     |   No   | client |&lt;br /&gt;
+|    2     |   Yes  | client |&lt;br /&gt;
+|    3     |   No   | client |&lt;br /&gt;
+|    4     |   No   | client |&lt;br /&gt;
+|    10    |   No   | driver |&lt;br /&gt;
+|    11    |   No   | driver |&lt;br /&gt;
+|    12    |   No   | driver |&lt;br /&gt;
+|    13    |   No   | driver |&lt;br /&gt;
++———-+——–+——–+&lt;br /&gt;
+Write a SQL query to find the cancellation rate of requests made by unbanned clients between Oct 1, 2013 and Oct 3, 2013. For the above tables, your SQL query should return the following rows with the cancellation rate being rounded to two decimal places.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;+————+——————-+&lt;br /&gt;
+|     Day    | Cancellation Rate |&lt;br /&gt;
++————+——————-+&lt;br /&gt;
+| 2013-10-01 |       0.33        |&lt;br /&gt;
+| 2013-10-02 |       0.00        |&lt;br /&gt;
+| 2013-10-03 |       0.50        |&lt;br /&gt;
++————+——————-+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;解答：描述的很复杂的一道题目，难度式&lt;code class=&quot;highlighter-rouge&quot;&gt;hard&lt;/code&gt;，其实就是处理逻辑问题：&lt;br /&gt;
+首先，查出结果的两个字段值，在退单率上，用了条件判断进行筛选，这是关键；&lt;br /&gt;
+然后就是正常的加上限定的查询条件了，这里判断是否为有效用户通过子查询获得，&lt;br /&gt;
+也可用用关联表。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Request_at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+       &lt;span class=&quot;no&quot;&gt;ROUND&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;COUNT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;IF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'completed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;COUNT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Cancellation Rate'&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Trips&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Request_at&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BETWEEN&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2013-10-01'&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2013-10-03'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Client_id&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Users_Id&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Banned&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Yes'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Request_at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Fri, 23 Jun 2017 18:21:06 +0800</pubDate>
+				<link>http://localhost:4000/2017/06/Leetcode-database-262</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-database-262</guid>
+			</item>
+		
+			<item>
 				<title>LeetCode_596. Classes More Than 5 Students</title>
 				<description>&lt;h3 id=&quot;596-classes-more-than-5-students&quot;&gt;596. Classes More Than 5 Students&lt;/h3&gt;
 &lt;p&gt;There is a table courses with columns: student and class&lt;/p&gt;
@@ -427,172 +555,6 @@ Id is the primary key column for this table.&lt;/p&gt;
 				<pubDate>Tue, 20 Jun 2017 17:21:06 +0800</pubDate>
 				<link>http://localhost:4000/2017/06/Leetcode-database-185</link>
 				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-database-185</guid>
-			</item>
-		
-			<item>
-				<title>LeetCode_184. Department Highest Salary</title>
-				<description>&lt;h3 id=&quot;184-department-highest-salary&quot;&gt;184. Department Highest Salary&lt;/h3&gt;
-&lt;p&gt;The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+——-+——–+————–+&lt;br /&gt;
-| Id | Name  | Salary | DepartmentId |&lt;br /&gt;
-+—-+——-+——–+————–+&lt;br /&gt;
-| 1  | Joe   | 70000  | 1            |&lt;br /&gt;
-| 2  | Henry | 80000  | 2            |&lt;br /&gt;
-| 3  | Sam   | 60000  | 2            |&lt;br /&gt;
-| 4  | Max   | 90000  | 1            |&lt;br /&gt;
-+—-+——-+——–+————–+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The Department table holds all departments of the company.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+———-+&lt;br /&gt;
-| Id | Name     |&lt;br /&gt;
-+—-+———-+&lt;br /&gt;
-| 1  | IT       |&lt;br /&gt;
-| 2  | Sales    |&lt;br /&gt;
-+—-+———-+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Write a SQL query to find employees who have the highest salary in each of the departments. For the above tables, Max has the highest salary in the IT department and Henry has the highest salary in the Sales department.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;+————+———-+——–+&lt;br /&gt;
-| Department | Employee | Salary |&lt;br /&gt;
-+————+———-+——–+&lt;br /&gt;
-| IT         | Max      | 90000  |&lt;br /&gt;
-| Sales      | Henry    | 80000  |&lt;br /&gt;
-+————+———-+——–+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;解答：输出各部门的最大薪水：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;子查询+连接查询：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Write your MySQL query statement below&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Department&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Department&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;id&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;其实就是分组查出最大薪水，然后和雇员表、部门表内联后输出。&lt;/p&gt;
-
-&lt;p&gt;-还有一个思路，雇员表内联部门表后，从最大薪水表用&lt;code class=&quot;highlighter-rouge&quot;&gt;IN&lt;/code&gt;过滤：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Write your MySQL query statement below&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Department&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;department&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;departmentId&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-</description>
-				<pubDate>Tue, 20 Jun 2017 15:21:06 +0800</pubDate>
-				<link>http://localhost:4000/2017/06/Leetcode-database-184</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-database-184</guid>
-			</item>
-		
-			<item>
-				<title>LeetCode_183. Customers Who Never Order</title>
-				<description>&lt;h3 id=&quot;183-customers-who-never-order&quot;&gt;183. Customers Who Never Order&lt;/h3&gt;
-&lt;p&gt;Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.&lt;/p&gt;
-
-&lt;p&gt;Table: &lt;code class=&quot;highlighter-rouge&quot;&gt;Customers.&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+——-+&lt;br /&gt;
-| Id | Name  |&lt;br /&gt;
-+—-+——-+&lt;br /&gt;
-| 1  | Joe   |&lt;br /&gt;
-| 2  | Henry |&lt;br /&gt;
-| 3  | Sam   |&lt;br /&gt;
-| 4  | Max   |&lt;br /&gt;
-+—-+——-+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Table: &lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+————+&lt;br /&gt;
-| Id | CustomerId |&lt;br /&gt;
-+—-+————+&lt;br /&gt;
-| 1  | 3          |&lt;br /&gt;
-| 2  | 1          |&lt;br /&gt;
-+—-+————+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Using the above tables as example, return the following:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;+———–+&lt;br /&gt;
-| Customers |&lt;br /&gt;
-+———–+&lt;br /&gt;
-| Henry     |&lt;br /&gt;
-| Max       |&lt;br /&gt;
-+———–+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;解答：找出数据中没有下过订单的顾客：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;子查询：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Write your MySQL query statement below&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Customers&lt;/span&gt;  &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;customers&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;customerId&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;联表查询：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Customers&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Customers&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;LEFT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Orders&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CustomerId&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CustomerId&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-</description>
-				<pubDate>Tue, 20 Jun 2017 15:21:06 +0800</pubDate>
-				<link>http://localhost:4000/2017/06/Leetcode-database-183</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-database-183</guid>
-			</item>
-		
-			<item>
-				<title>MYSQL中删除数据表的三种方式</title>
-				<description>&lt;h3 id=&quot;mysql中删除数据表的三种方式&quot;&gt;MYSQL中删除数据表的三种方式&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;DROP&lt;br /&gt;
-使用方式：
-    &lt;blockquote&gt;
-      &lt;p&gt;drop table tbl_name;&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;删除数据表的内容和定义，释放空间。彻底删除表。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TRUNCATE&lt;br /&gt;
-使用方式：
-    &lt;blockquote&gt;
-      &lt;p&gt;TRUNCATE TABLE tbl_name;&lt;br /&gt;
-清空数据表，释放空间，保留表结构，表状态信息回复原始状态(自增ID从0开始)。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;DELETE&lt;br /&gt;
-使用方式：
-    &lt;blockquote&gt;
-      &lt;p&gt;DELETE TABLE tbl_name;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;逐行删除表数据，会触发事务，删除可通过&lt;code class=&quot;highlighter-rouge&quot;&gt;ROLLBACK&lt;/code&gt;撤销。&lt;br /&gt;
-空间不回收，可以通过&lt;/p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;OPTIMIZE TABLE  tbl_name;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;优化表空间。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-				<pubDate>Tue, 20 Jun 2017 14:21:06 +0800</pubDate>
-				<link>http://localhost:4000/2017/06/MYSQL-drop-delete-truncate</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/06/MYSQL-drop-delete-truncate</guid>
 			</item>
 		
 	</channel>
