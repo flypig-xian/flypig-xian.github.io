@@ -7,6 +7,99 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Git 本地配置多账户</title>
+				<description>&lt;p&gt;问题描述：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;我自己在Github上有一个&lt;a href=&quot;https://github.com/flypig-xian&quot;&gt;账号&lt;/a&gt;，里面维护了一些资料和工具，这次入职链家，团队给了一个新的账号和&lt;a href=&quot;http://git.lianjia.com&quot;&gt;平台&lt;/a&gt;。如果不配置SSH Key到服务器上，每次都要输入密码很麻烦！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;感谢同事的指点，虽然不是理想的解决方法，但是也是解决方法的一部分！最后经过精确检索，将正确的解决方法记录在这里！&lt;/p&gt;
+
+&lt;p&gt;总的来说，解决方法也很简单，就是对应两个账号，生成两套Key(保存文件名要不一样)，然后添加Key，最后在~/.ssh下配置config文件就可以了！&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;假设已经配置过一个Git账号了，我们先用&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh-keygen&lt;/code&gt;命令生成一组新的&lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa_new&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa_new_pub&lt;/code&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;ssh-keygen -t rsa -C “your new email”&lt;br /&gt;
+这里需要注意，给保存秘钥的文件起一个不一样的名字，不要一路回车下去，否则会覆盖原有的秘钥文件。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh-agent&lt;/code&gt;命令让ssh识别不同的秘钥
+    &lt;blockquote&gt;
+      &lt;p&gt;ssh-add ~/.ssh/id_rsa_new&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;如果出现&lt;code class=&quot;highlighter-rouge&quot;&gt;Could not open a connection to your authentication agent&lt;/code&gt;的错误提示，可以尝试按下述方式解决：&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;ssh-agent bash&lt;br /&gt;
+  ssh-add ~/.ssh/id_rsa_work&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh&lt;/code&gt;下添加config配置文件并加上相应的配置
+    &lt;blockquote&gt;
+      &lt;p&gt;touch config        # 如果不存在，则创建config文件&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;文件内容按照示例设置：&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;# 本文件用于配置私钥对应的服务器&lt;br /&gt;
+      # Default user&lt;br /&gt;
+      Host github.com.cn&lt;br /&gt;
+      HostName github.com.cn&lt;br /&gt;
+      User git&lt;br /&gt;
+      IdentityFile ~/.ssh/id_rsa&lt;br /&gt;
+      # Second user&lt;br /&gt;
+      # 建一个github别名，新建的帐号使用这个别名做克隆和更新&lt;br /&gt;
+      Host git@code.xxxxxxx.com&lt;br /&gt;
+      HostName https://code.xxxxxxx.com    #公司的gitlab&lt;br /&gt;
+      User git&lt;br /&gt;
+      IdentityFile ~/.ssh/id_rsa_new&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;Host会替换HostName中的内容，所以如果系统有默认的话，可以直接用Host,或者两者内容改成一致。&lt;br /&gt;
+  最后不要忘记把Key添加到服务器中。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Wed, 05 Jul 2017 23:25:06 +0800</pubDate>
+				<link>http://localhost:4000/2017/07/Git-skill-collect</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/07/Git-skill-collect</guid>
+			</item>
+		
+			<item>
+				<title>20170705 入职第二天 记录</title>
+				<description>&lt;p&gt;入职的第二天，主要是申请各种资源啊，使用各种资源啊、系统啊什么的！不会的就要多问！&lt;br /&gt;
+这里有几个坑，不过也已经踩平的问题。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;链家网给的账号和初始密码，如果是用的链家的WIFI，是不会认证通过的！要在有线网环境下，先登录mail.lianjia.com修改密码后，才能登录。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;WIKI的登录名是去掉@lianjia.com的邮箱前缀部分，OA系统则是用的用户的ID，稍微混乱一些，不能都通用，有些麻烦！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;新人第一天中的部分记录不详细，比如如何申请显示器，以及一些耗材线缆啥的在哪里？还有申请工卡的问题！申请git权限，需要向相关leader申请权限等等。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;下午主要是参与了两个大会议：旅居系统的需求研讨会，以及公司的每周例会！&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;需求研讨，以PM讲述从不同角度去介绍产品，FE/RD等各子系统的相关成员会结合各自领域的实际情况，给出各自的意见！因为旅居这边要做的东西很多，感觉筹备的还不是很充分！还需要进一步的研讨！不过与会人员挺多的，可以感受到这是一个很被给予期望的项目。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;周会，或者被称为例会：&lt;br /&gt;
+这次会议先是健总传达了上层的指示和人员变动，大概意思是链家网技术这边会有很好的升迁的机会！会得到领导的大力支持！&lt;br /&gt;
+剩下的三个议题，包括TB、新人培养和会议流程！最终其实也没有什么定论！不过，新团队很多都在摸索之中，就像今天的鸡翅一样，感觉我吃的那个就不是鸡翅！！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+				<pubDate>Wed, 05 Jul 2017 23:21:06 +0800</pubDate>
+				<link>http://localhost:4000/2017/07/lianjia-job-content-2</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/07/lianjia-job-content-2</guid>
+			</item>
+		
+			<item>
 				<title>20170704 入职第一天 记录</title>
 				<description>&lt;p&gt;上午主要是填写了各种文件，账号和各种权限还没有开！从下午开始简单记录：&lt;br /&gt;
 这次加入的是新房研发部门，团队是旅居研发团队。团队中除了leader健总，还有师父王宝明，李振兴，张留彬三名加入链家一年以上的老员工。剩下四人是新加入链家的新人，包括我，牛京，王伉三个基本同一时间入职的，还有郑泽亮同学，应该是入职链家有一段时间了。&lt;/p&gt;
@@ -437,124 +530,6 @@ id&amp;amp;1&lt;/p&gt;
 				<pubDate>Wed, 21 Jun 2017 10:21:06 +0800</pubDate>
 				<link>http://localhost:4000/2017/06/Leetcode-database-197</link>
 				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-database-197</guid>
-			</item>
-		
-			<item>
-				<title>LeetCode_196. Delete Duplicate Emails</title>
-				<description>&lt;h3 id=&quot;196-delete-duplicate-emails&quot;&gt;196. Delete Duplicate Emails&lt;/h3&gt;
-&lt;p&gt;Write a SQL query to delete all duplicate email entries in a table named Person, keeping only unique emails based on its smallest Id.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+——————+&lt;br /&gt;
-| Id | Email            |&lt;br /&gt;
-+—-+——————+&lt;br /&gt;
-| 1  | john@example.com |&lt;br /&gt;
-| 2  | bob@example.com  |&lt;br /&gt;
-| 3  | john@example.com |&lt;br /&gt;
-+—-+——————+&lt;br /&gt;
-Id is the primary key column for this table.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;For example, after running your query, the above &lt;code class=&quot;highlighter-rouge&quot;&gt;Person&lt;/code&gt; table should have the following rows:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+——————+&lt;br /&gt;
-| Id | Email            |&lt;br /&gt;
-+—-+——————+&lt;br /&gt;
-| 1  | john@example.com |&lt;br /&gt;
-| 2  | bob@example.com  |&lt;br /&gt;
-+—-+——————+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;解答：删除重复的邮箱，按照示例是删除ID较大的重复邮箱：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;子查询，难点在于构造需要删除的ID的集合：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Write your MySQL query statement below&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;DELETE&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;MIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;这个写法如果不把查询出的最小ID集合作为&lt;code class=&quot;highlighter-rouge&quot;&gt;P&lt;/code&gt;的话，会报错：&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;You can’t specify target table &lt;tbl&gt; for update in FROM clause&lt;/tbl&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;意思说，不可以将同一个表中&lt;code class=&quot;highlighter-rouge&quot;&gt;SELECT&lt;/code&gt;出的数据，再在表上进行删除等更新操作。&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;第二种方式，就是使用连表删除：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;  &lt;span class=&quot;no&quot;&gt;DELETE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Email&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ANDp1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-</description>
-				<pubDate>Tue, 20 Jun 2017 17:21:06 +0800</pubDate>
-				<link>http://localhost:4000/2017/06/Leetcode-database-196</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-database-196</guid>
-			</item>
-		
-			<item>
-				<title>LeetCode_185. Department Top Three Salaries</title>
-				<description>&lt;h3 id=&quot;185-department-top-three-salaries&quot;&gt;185. Department Top Three Salaries&lt;/h3&gt;
-&lt;p&gt;The Employee table holds all employees. Every employee has an Id, and there is also a column for the department Id.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+——-+——–+————–+&lt;br /&gt;
-| Id | Name  | Salary | DepartmentId |&lt;br /&gt;
-+—-+——-+——–+————–+&lt;br /&gt;
-| 1  | Joe   | 70000  | 1            |&lt;br /&gt;
-| 2  | Henry | 80000  | 2            |&lt;br /&gt;
-| 3  | Sam   | 60000  | 2            |&lt;br /&gt;
-| 4  | Max   | 90000  | 1            |&lt;br /&gt;
-| 5  | Janet | 69000  | 1            |&lt;br /&gt;
-| 6  | Randy | 85000  | 1            |&lt;br /&gt;
-+—-+——-+——–+————–+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The Department table holds all departments of the company.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;+—-+———-+&lt;br /&gt;
-| Id | Name     |&lt;br /&gt;
-+—-+———-+&lt;br /&gt;
-| 1  | IT       |&lt;br /&gt;
-| 2  | Sales    |&lt;br /&gt;
-+—-+———-+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Write a SQL query to find employees who earn the top three salaries in each of the department. For the above tables, your SQL query should return the following rows.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;+————+———-+——–+&lt;br /&gt;
-| Department | Employee | Salary |&lt;br /&gt;
-+————+———-+——–+&lt;br /&gt;
-| IT         | Max      | 90000  |&lt;br /&gt;
-| IT         | Randy    | 85000  |&lt;br /&gt;
-| IT         | Joe      | 70000  |&lt;br /&gt;
-| Sales      | Henry    | 80000  |&lt;br /&gt;
-| Sales      | Sam      | 60000  |&lt;br /&gt;
-+————+———-+——–+&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;解答：上一题的增强版，要输出前三高的薪水(薪水不重复)，：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;子查询+连接查询：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Write your MySQL query statement below&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Department&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;JOIN&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Department&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;COUNT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DISTINCT&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DepartmentId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Salary&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DESC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;这个不是很好理解，问题的关键在于子查询这里，取同一部门的所有薪水超过当前比较薪水的个数要小于3，即0,1,2，然后输出&lt;code class=&quot;highlighter-rouge&quot;&gt;e.salary&lt;/code&gt;,也就是取出部门的最高，次高和第三高的薪水。&lt;/p&gt;
-</description>
-				<pubDate>Tue, 20 Jun 2017 17:21:06 +0800</pubDate>
-				<link>http://localhost:4000/2017/06/Leetcode-database-185</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/06/Leetcode-database-185</guid>
 			</item>
 		
 	</channel>
